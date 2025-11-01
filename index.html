@@ -1,12 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datas de Concursos — Professor Marcelo Ferreira</title>
-  </head>
-  <body class="antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datas de Concursos - Prof. Marcelo Ferreira</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4fdf4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #2e7d32, #66bb6a);
+      color: white;
+      text-align: center;
+      padding: 1.5em;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 1em;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      border-bottom: 2px solid #66bb6a;
+      padding-bottom: 0.3em;
+    }
+    .concurso {
+      background: #e8f5e9;
+      margin: 1em 0;
+      padding: 0.8em;
+      border-radius: 8px;
+    }
+    .atencao {
+      background: #fff3cd;
+      color: #856404;
+      padding: 1em;
+      border-radius: 8px;
+      margin-top: 2em;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background: #2e7d32;
+      color: white;
+      margin-top: 2em;
+      font-size: 0.9em;
+    }
+    .btn {
+      display: inline-block;
+      background: #43a047;
+      color: white;
+      padding: 0.6em 1.2em;
+      margin: 0.5em 0;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <header>📅 Datas de Concursos - Prof. Marcelo Ferreira</header>
+
+  <main>
+    <h2>📌 Novembro 2025</h2>
+    <div class="concurso">23/11 - Viana - MA - Fundação Sousandrade</div>
+    <div class="concurso">23/11 - Forquilha - CE - Instituto Consulpam</div>
+    <div class="concurso">22 e 23/11 - Beberibe - CE (cargos gerais) - Instituto Consulpam</div>
+    <div class="concurso">23/11 - São João do Jaguaribe - CE</div>
+    <div class="concurso">23/11 - Marcos Parente - PI - SUSPENSO</div>
+    <div class="concurso">23/11 - Ipaumirim - CE - Patativa do Assaré</div>
+    <div class="concurso">23/11 - Cantanhede - MA - Instituto JK</div>
+    <div class="concurso">23/11 - Lavras da Mangabeira - CE</div>
+    <div class="concurso">30/11 - Beberibe - CE (Agente de Trânsito) - Instituto Consulpam</div>
+
+    <h2>📌 Dezembro 2025</h2>
+    <div class="concurso">07/12 - Morrinhos - CE (ACS e ACE) - Instituto Consulpam</div>
+    <div class="concurso">07/12 - Paço do Lumiar - MA (Seletivo) - Fundação Sousandrade</div>
+    <div class="concurso">07/12 - Passagem Franca - MA - Instituto Legatus</div>
+    <div class="concurso">07/12 - Turilândia - MA (GCM e Agente de Trânsito)</div>
+    <div class="concurso">07/12 - Flores - PE</div>
+    <div class="concurso">13/12 - Morrinhos - CE (Magistério e nível fundamental) - Instituto Consulpam</div>
+    <div class="concurso">14/12 - Morrinhos - CE (Cargos gerais nível médio e superior)</div>
+    <div class="concurso">14/12 - Floriano - PI - IDIB</div>
+    <div class="concurso">14/12 - Piripiri - PI - Instituto Legatus</div>
+    <div class="concurso">21/12 - Lima Campos - MA - Instituto Legatus</div>
+    <div class="concurso">21/12 - Piracuruca - PI (Educação) - Funatec</div>
+
+    <div class="atencao">
+      ⚠️ Atenção: Todas as datas podem sofrer alteração. Os dados acima são apenas reprodução das datas oficiais divulgadas no edital. A página será atualizada semanalmente.
+    </div>
+
+    <h2>🛏️ Contatos e Informações Úteis</h2>
+    <p>Espaço reservado para informações sobre hotéis, ônibus ou caronas para o dia da prova.</p>
+
+    <a class="btn" href="https://forms.gle/1LiQbKyKhEoXuGDD9" target="_blank">📨 Enviar sugestão / Contato</a>
+
+    <p id="update-time" style="margin-top:1em; font-size:0.9em; color:#555;"></p>
+  </main>
+
+  <footer>
+    Organizado por: Professor Marcelo Ferreira — marcelomferreira2025@gmail.com
+  </footer>
+
+  <script>
+    const now = new Date();
+    const formatted = now.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+    document.getElementById('update-time').textContent = "Última atualização: " + formatted;
+  </script>
+</body>
 </html>

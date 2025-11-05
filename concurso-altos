@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apostilas & Aulas – Concurso Prefeitura de Altos-PI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Estilo extra para logo simples */
+    .logo {
+      width: 120px;
+      height: auto;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-700 via-blue-500 to-blue-300 min-h-screen text-white font-sans">
+
+  <header class="text-center py-10">
+    <img class="logo" src="logo-altos-concurso.svg" alt="Logo Concurso Altos-PI">
+    <h1 class="text-4xl font-extrabold mt-4">Concurso Altos-PI</h1>
+    <p class="text-lg mt-2">Aulas e Apostilas Exclusivas para o Concurso da Prefeitura de Altos – PI</p>
+  </header>
+
+  <main class="max-w-3xl mx-auto text-center px-6">
+    <section class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-lg">
+      <h2 class="text-2xl font-bold mb-4">Prepare-se com o melhor material!</h2>
+      <p class="text-lg mb-6">
+        Estamos preparando <strong>apostilas atualizadas</strong> e <strong>aulas exclusivas</strong> para você conquistar sua vaga no Concurso da Prefeitura de Altos – PI.
+      </p>
+      <p class="text-lg mb-6">
+        Conteúdo de <strong>Conhecimentos Locais</strong> e matérias específicas para diversos cargos.
+      </p>
+
+      <div class="space-y-4">
+        <a href="https://chat.whatsapp.com/Gpd9NsAxHF9GHhtZlISoWt?mode=wwt" target="_blank"
+           class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-lg">
+           👥 Entrar no Grupo Oficial
+        </a>
+
+        <a href="https://docs.google.com/forms/d/SEU_FORMULARIO_ID_AQUI/viewform" target="_blank"
+           class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-lg">
+           💬 Enviar Sugestões & Informações
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h3 class="text-xl font-semibold mb-3">Por que escolher nosso material?</h3>
+      <ul class="space-y-2 text-left inline-block">
+        <li>✅ Conteúdo atualizado com base no edital previsto</li>
+        <li>✅ Linguagem clara e objetiva</li>
+        <li>✅ Foco nos temas mais cobrados</li>
+        <li>✅ Apoio via grupo oficial com dicas e atualizações</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="text-center mt-10 text-sm opacity-80">
+    © 2025 Preparatório Altos-PI. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

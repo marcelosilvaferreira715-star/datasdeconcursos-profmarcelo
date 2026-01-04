@@ -123,6 +123,7 @@ footer {
     <option>ACE</option>
     <option>Magistério</option>
     <option>Administrativo</option>
+    <option>Geral</option>
   </select>
 
   <select id="fEstado" onchange="filtrar()">
@@ -131,6 +132,7 @@ footer {
     <option>MA</option>
     <option>PI</option>
     <option>PE</option>
+    <option>BRASIL</option>
   </select>
 
   <select id="fCidade" onchange="filtrar()">
@@ -139,18 +141,38 @@ footer {
     <option>Maranguape</option>
     <option>Alcântara</option>
     <option>Caxias</option>
+    <option>Croata</option>
+    <option>Altos</option>
+    <option>Viçosa</option>
+    <option>Tuntum</option>
+    <option>Porto Alegre do Piauí</option>
+    <option>Timon</option>
+    <option>Teresina</option>
+    <option>Campo Maior</option>
+    <option>São José de Ribamar</option>
+    <option>Vitória do Mearim</option>
+    <option>Cururupu</option>
   </select>
 </div>
 
 <h2>📌 Janeiro 2026</h2>
 
+  <div class="concurso" data-cargo="Geral" data-estado="PI" data-cidade="Porto Alegre do Piauí" id="jf">
+11/01 – Porto Alegre do Piauí – Consep
+<div class="botoes">
+<a class="botao edital" href="https://www.consep-pi.com.br/concurso/C0NCUS0-PUBLIC0-P0RT0-ALEGRE-D0-PIAUI-2025/195/" target="_blank">📄 Edital</a>
+<button class="botao vou-fazer" onclick="marcar('jf')">✅ Vou fazer</button>
+</div>
+<div class="ranking" id="r_jf"></div>
+</div>
+  
 <div class="concurso" data-cargo="Administrativo" data-estado="PI" data-cidade="José de Freitas" id="jf">
 11/01 – José de Freitas/PI – Instituto Legatus
 <div class="botoes">
 <a class="botao edital" href="https://www.legatus.org.br/concursos/149/municipio-de-jose-de-freitas/" target="_blank">📄 Edital</a>
 <button class="botao vou-fazer" onclick="marcar('jf')">✅ Vou fazer</button>
 </div>
-<div class="ranking" id="r_jf"></div>
+<div class="ranking" id="r_pap"></div>
 </div>
 
 <h2>📌 Fevereiro 2026</h2>
@@ -166,10 +188,31 @@ footer {
 
 <h2>📌 Março 2026</h2>
 
+  <div class="concurso" data-cargo="Administrativo" data-estado="BRASIL" data-cidade="BRASIL" id="alc_ace">
+01/03 – IBGE – APM e SCQ
+<div class="botoes">
+<a class="botao edital" href="https://conhecimento.fgv.br/concursos/pssibge25" target="_blank">📄 Edital</a>
+<button class="botao vou-fazer" onclick="marcar('alc_ace')">✅ Vou fazer</button>
+</div>
+<div class="ranking" id="r_ibge_adm"></div>
+</div>
+  
 <div class="concurso" data-cargo="ACE" data-estado="MA" data-cidade="Alcântara" id="alc_ace">
 08/03 – Alcântara/MA – Agente de Endemias
 <div class="botoes">
 <a class="botao edital" href="https://www.fsaduconcursos.org.br/c/1367/publicacoes.php" target="_blank">📄 Edital</a>
+<button class="botao vou-fazer" onclick="marcar('alc_ace')">✅ Vou fazer</button>
+</div>
+<div class="ranking" id="r_alc_ace"></div>
+</div>
+<a class="botao edital" href="https://datasdeconcursos-profmarcelo.vercel.app/agente-endemias.html" target="_blank">
+🧠 Simulados – Agente de Endemias
+</a>
+  
+  <div class="concurso" data-cargo="Geral" data-estado="MA" data-cidade="Alcântara" id="alc_ace">
+08/03 – Alcântara/MA – Cargos Gerais
+<div class="botoes">
+<a class="botao edital" href="https://www.fsaduconcursos.org.br/c/1365/info.php">📄 Edital</a>
 <button class="botao vou-fazer" onclick="marcar('alc_ace')">✅ Vou fazer</button>
 </div>
 <div class="ranking" id="r_alc_ace"></div>

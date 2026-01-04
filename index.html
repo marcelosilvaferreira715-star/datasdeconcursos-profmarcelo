@@ -1,165 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datas de Concursos - Prof. Marcelo Ferreira</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datas de Concursos 2026 - Prof. Marcelo Ferreira</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f4fdf4;
-      color: #222;
-      margin: 0;
-    }
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4fdf4;
+  color: #222;
+  margin: 0;
+}
 
-    header {
-      text-align: center;
-      background: linear-gradient(90deg, #2e7d32, #66bb6a);
-      padding: 20px 10px;
-      color: #fff;
-    }
+header {
+  text-align: center;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  padding: 20px 10px;
+  color: #fff;
+}
 
-    .banner-img {
-      max-width: 90%;
-      width: 320px;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 10px;
-    }
+.banner-img {
+  max-width: 90%;
+  width: 320px;
+  border-radius: 12px;
+}
 
-    header h1 {
-      font-size: 1.4rem;
-      margin: 10px 0 0;
-    }
+header h1 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
 
-    main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 15px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-    h2 {
-      color: #2e7d32;
-      border-bottom: 2px solid #66bb6a;
-      padding-bottom: 5px;
-      font-size: 1.2rem;
-    }
+h2 {
+  color: #2e7d32;
+  border-bottom: 2px solid #66bb6a;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
 
-    .concurso {
-      background: #e8f5e9;
-      margin-top: 12px;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-    }
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-    .botao-edital,
-    .botao-endemias,
-    .btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background-color: #0084ff;
-      color: #fff;
-      padding: 12px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 8px 0 15px;
-      transition: background-color 0.3s ease, transform 0.2s;
-    }
+.filtros select,
+.filtros input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 
-    .botao-endemias {
-      background-color: #0077cc;
-    }
+.concurso {
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
 
-    .botao-edital:hover,
-    .botao-endemias:hover,
-    .btn:hover {
-      background-color: #005fcc;
-      transform: scale(1.02);
-    }
+.botao {
+  display: block;
+  width: 100%;
+  background: #0084ff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  margin: 6px 0 12px;
+  cursor: pointer;
+  border: none;
+}
 
-    .atencao {
-      background: #fff3cd;
-      color: #856404;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 20px;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
+.botao:hover {
+  background: #005fcc;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #2e7d32;
-      color: #fff;
-      font-size: 0.85rem;
-      margin-top: 30px;
-    }
+.botao.vou-fazer {
+  background: #2e7d32;
+}
 
-    @media (min-width: 768px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
+.atencao {
+  background: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: bold;
+}
 
-      .botao-edital,
-      .botao-endemias,
-      .btn {
-        width: auto;
-        display: inline-block;
-        padding: 12px 20px;
-      }
-    }
-  </style>
+footer {
+  background: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.85rem;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  header h1 { font-size: 1.8rem; }
+  .botao { width: auto; display: inline-block; padding: 10px 20px; }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiv8DplaZnFCsHVQ1yx0d2eppZHNRisruRvJY1kpTNjZbSUqvuGRX-JjeMEM7Cp1E0CvFTqFpX0hj1qbJGcIYS6VgzTvSCQKmQucynSX5JHs3rk--vkscToOZvOwDt6h0H05L7Ek49jFCruMkNZ56Nv7HGH4l69x3WHbKUN00Gt3vGpgGBUeW8csgYB=w348-h264-p-k-no-nu" 
-       alt="Logo Professor Marcelo" 
-       class="banner-img">
-  <h1>📅 Datas de Concursos - Prof. Marcelo Ferreira</h1>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiv8DplaZnFCsHVQ1yx0d2eppZHNRisruRvJY1kpTNjZbSUqvuGRX-JjeMEM7Cp1E0CvFTqFpX0hj1qbJGcIYS6VgzTvSCQKmQucynSX5JHs3rk--vkscToOZvOwDt6h0H05L7Ek49jFCruMkNZ56Nv7HGH4l69x3WHbKUN00Gt3vGpgGBUeW8csgYB=w348-h264-p-k-no-nu"
+       alt="Logo Professor Marcelo" class="banner-img">
+  <h1>📅 Datas de Concursos 2026 – Prof. Marcelo Ferreira</h1>
 </header>
 
 <main>
 
-<h2>📌 Dezembro 2025</h2>
-<div class="concurso">07/12 - Morrinhos - CE (ACS e ACE) - Instituto Consulpam (REALIZADO)</div>
-<a href="https://consulpam.com.br/index.php?menu=concursos&acao=ver&id=765" target="_blank" class="botao-edital">📄 Ver Edital e Informações</a>
+<div class="filtros">
+  <select id="filtroCargo">
+    <option value="">Todos os cargos</option>
+    <option value="ACS">ACS</option>
+    <option value="ACE">ACE</option>
+    <option value="Magisterio">Magistério</option>
+    <option value="Geral">Geral</option>
+  </select>
 
-<a href="https://datasdeconcursos-profmarcelo.vercel.app/agente-endemias.html" target="_blank" class="botao-endemias">
-🧠 Acessar Simulados — Agente de Endemias
-</a>
+  <select id="filtroEstado">
+    <option value="">Todos os estados</option>
+    <option value="PI">PI</option>
+    <option value="CE">CE</option>
+    <option value="MA">MA</option>
+    <option value="PE">PE</option>
+  </select>
 
-<div class="concurso">07/12 - Paço do Lumiar - MA (Seletivo) - Fundação Sousandrade (REALIZADO)</div>
-<a href="https://www.fsaduconcursos.org.br/c/central/" target="_blank" class="botao-edital">📄 Ver Edital e Informações</a>
-
-<!-- TODO O RESTANTE DO CONTEÚDO PERMANECE IGUAL AO SEU -->
-<!-- Basta continuar colando os concursos abaixo, sem repetir <style> -->
-
-<div class="atencao">
-⚠️ Atenção: Todas as datas podem sofrer alteração. Os dados acima são apenas reprodução das datas oficiais divulgadas no edital. A página será atualizada semanalmente.
+  <input type="text" id="filtroCidade" placeholder="Filtrar por cidade">
 </div>
 
-<h2>🛏️ Contatos e Informações Úteis</h2>
-<p>Espaço reservado para informações sobre hotéis, ônibus ou caronas para o dia da prova.</p>
+<h2>📌 Janeiro 2026</h2>
 
-<a class="btn" href="https://forms.gle/1LiQbKyKhEoXuGDD9" target="_blank">
-📨 Enviar sugestão / Contato
-</a>
+<div class="concurso" data-cargo="Geral" data-estado="PI" data-cidade="José de Freitas" id="josefreitas">
+11/01 - José de Freitas-PI - Instituto Legatus
+</div>
+<button class="botao" onclick="marcar('josefreitas')">✅ Vou fazer</button>
+<a class="botao" href="https://www.legatus.org.br/concursos/149/municipio-de-jose-de-freitas/" target="_blank">📄 Ver Edital</a>
 
-<p id="update-time" style="margin-top:10px; font-size:0.85rem; color:#555;"></p>
+<div class="concurso" data-cargo="Geral" data-estado="PI" data-cidade="Teresina" id="semec">
+11/01 - SEMEC Teresina - NUCEPE
+</div>
+<button class="botao" onclick="marcar('semec')">✅ Vou fazer</button>
+<a class="botao" href="https://nucepe.uespi.br/" target="_blank">📄 Ver Edital</a>
+
+<div class="concurso" data-cargo="Geral" data-estado="MA" data-cidade="Vitória do Mearim" id="vitoriam">
+11/01 - Vitória do Mearim-MA - FUNATEC
+</div>
+<button class="botao" onclick="marcar('vitoriam')">✅ Vou fazer</button>
+<a class="botao" href="https://www.funatec.org.br/concursos/154/concurso-publico-da-prefeitura-municipal-de-vitoria-do-mearim-ma" target="_blank">📄 Ver Edital</a>
+
+<div class="concurso" data-cargo="Geral" data-estado="CE" data-cidade="Caridade" id="caridade">
+18/01 - Caridade-CE - Fundação CETREDE
+</div>
+<button class="botao" onclick="marcar('caridade')">✅ Vou fazer</button>
+<a class="botao" href="https://cetredeneoconcursos.com.br/Concursos_PDF/095_Concurso/095_Concurso095.pdf" target="_blank">📄 Ver Edital</a>
+
+<div class="concurso" data-cargo="Geral" data-estado="PE" data-cidade="Petrolina" id="petrolina">
+18/01 - Petrolina-PE - IAUPE
+</div>
+<button class="botao" onclick="marcar('petrolina')">✅ Vou fazer</button>
+<a class="botao" href="http://www.upenet.com.br/concursos/2025/25_Pref_Petrolina/" target="_blank">📄 Ver Edital</a>
+
+<h2>📌 Fevereiro 2026</h2>
+
+<div class="concurso" data-cargo="ACS" data-estado="CE" data-cidade="Viçosa do Ceará" id="vicosa">
+01/02 - Viçosa do Ceará - ACS e ACE - Instituto Consulpam
+</div>
+<button class="botao" onclick="marcar('vicosa')">✅ Vou fazer</button>
+<a class="botao" href="https://consulpam.com.br/index.php?menu=concursos&acao=ver&id=793" target="_blank">📄 Ver Edital</a>
+
+<div class="concurso" data-cargo="ACS" data-estado="CE" data-cidade="Maranguape" id="maranguape">
+08/02 - Maranguape-CE - ACS e ACE - Instituto Consulpam
+</div>
+<button class="botao" onclick="marcar('maranguape')">✅ Vou fazer</button>
+<a class="botao" href="https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=777" target="_blank">📄 Ver Edital</a>
+
+<h2>📌 Março 2026</h2>
+
+<div class="concurso" data-cargo="Geral" data-estado="MA" data-cidade="Alcântara" id="alcantara">
+08/03 - Alcântara-MA - Fundação Sousândrade
+</div>
+<button class="botao" onclick="marcar('alcantara')">✅ Vou fazer</button>
+<a class="botao" href="https://www.fsaduconcursos.org.br/c/1365/info.php" target="_blank">📄 Ver Edital</a>
+
+<div class="atencao">
+⚠️ Atenção: Datas sujeitas a alterações conforme edital oficial.
+</div>
 
 </main>
 
@@ -168,10 +215,38 @@ Organizado por: Professor Marcelo Ferreira — marcelomferreira2025@gmail.com
 </footer>
 
 <script>
-  const now = new Date();
-  document.getElementById("update-time").textContent =
-    "Última atualização: " + now.toLocaleString("pt-BR");
+const filtroCargo = document.getElementById("filtroCargo");
+const filtroEstado = document.getElementById("filtroEstado");
+const filtroCidade = document.getElementById("filtroCidade");
+const concursos = document.querySelectorAll(".concurso");
+
+function filtrar() {
+  const cargo = filtroCargo.value.toLowerCase();
+  const estado = filtroEstado.value.toLowerCase();
+  const cidade = filtroCidade.value.toLowerCase();
+
+  concursos.forEach(c => {
+    const ok =
+      (!cargo || c.dataset.cargo.toLowerCase().includes(cargo)) &&
+      (!estado || c.dataset.estado.toLowerCase().includes(estado)) &&
+      (!cidade || c.dataset.cidade.toLowerCase().includes(cidade));
+
+    c.style.display = ok ? "block" : "none";
+    c.nextElementSibling.style.display = ok ? "block" : "none";
+    c.nextElementSibling.nextElementSibling.style.display = ok ? "block" : "none";
+  });
+}
+
+filtroCargo.addEventListener("change", filtrar);
+filtroEstado.addEventListener("change", filtrar);
+filtroCidade.addEventListener("keyup", filtrar);
+
+function marcar(id) {
+  localStorage.setItem(id, "vou_fazer");
+  alert("Concurso marcado como VOU FAZER!");
+}
 </script>
 
 </body>
 </html>
+

@@ -56,6 +56,43 @@ select {
   flex-wrap: wrap;
   gap: 8px;
 }
+  /* ========================= */
+/* BOTÃO DE APOSTILA - DESTAQUE */
+/* ========================= */
+.apostila-destaque {
+  background: linear-gradient(135deg, #ff9800, #ffb300);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+  border-left: 6px solid #e65100;
+}
+
+.apostila-destaque:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
+
+/* TÍTULO */
+.apostila-titulo {
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* SUBTÍTULO */
+.apostila-subtitulo {
+  font-size: 0.78em;
+  opacity: 0.95;
+}
+
 .botao {
   padding: 8px 12px;
   border-radius: 6px;
@@ -156,13 +193,17 @@ footer {
       ✅ Vou fazer
     </button>
 
-    <a class="botao apostila-destaque"
-       href="https://wa.me/5586981649580?text=Olá,%20tenho%20interesse%20na%20Apostila%20de%20Conhecimentos%20Locais%20do%20concurso%20de%20Porto%20Alegre%20do%20Piauí.%20Pode%20me%20passar%20as%20informações?"
-       target="_blank">
-       📘 Apostila – Conhecimentos Locais
-       <span>Material direcionado para a prova</span>
-    </a>
+   <a class="botao apostila-destaque"
+   href="https://wa.me/5586981649580?text=Olá,%20tenho%20interesse%20na%20Apostila%20de%20Conhecimentos%20Locais%20do%20concurso%20de%20Porto%20Alegre%20do%20Piauí.%20Pode%20me%20passar%20as%20informações?"
+   target="_blank">
+  <div class="apostila-titulo">
+    📘 Apostila de Conhecimentos Locais
   </div>
+  <div class="apostila-subtitulo">
+    Material direcionado • Foco na prova
+  </div>
+</a>
+
 
   <div class="ranking" id="r_pap"></div>
 </div>

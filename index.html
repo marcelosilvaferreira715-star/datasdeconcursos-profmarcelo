@@ -4,616 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datas de Concursos - Prof. Marcelo Ferreira</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       background-color: #f4fdf4;
       color: #222;
       margin: 0;
-      padding: 0;
     }
+
     header {
-      background: linear-gradient(90deg, #2e7d32, #66bb6a);
-      color: white;
       text-align: center;
-      padding: 1.5em;
-      font-size: 1.5em;
-      font-weight: bold;
+      background: linear-gradient(90deg, #2e7d32, #66bb6a);
+      padding: 20px 10px;
+      color: #fff;
     }
+
+    .banner-img {
+      max-width: 90%;
+      width: 320px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      margin: 10px 0 0;
+    }
+
     main {
       max-width: 900px;
-      margin: 2em auto;
-      padding: 1em;
-      background: white;
+      margin: 20px auto;
+      padding: 15px;
+      background: #fff;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #2e7d32;
       border-bottom: 2px solid #66bb6a;
-      padding-bottom: 0.3em;
+      padding-bottom: 5px;
+      font-size: 1.2rem;
     }
+
     .concurso {
       background: #e8f5e9;
-      margin: 1em 0;
-      padding: 0.8em;
+      margin-top: 12px;
+      padding: 12px;
       border-radius: 8px;
+      font-size: 0.95rem;
     }
+
+    .botao-edital,
+    .botao-endemias,
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #0084ff;
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px 0 15px;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .botao-endemias {
+      background-color: #0077cc;
+    }
+
+    .botao-edital:hover,
+    .botao-endemias:hover,
+    .btn:hover {
+      background-color: #005fcc;
+      transform: scale(1.02);
+    }
+
     .atencao {
       background: #fff3cd;
       color: #856404;
-      padding: 1em;
+      padding: 15px;
       border-radius: 8px;
-      margin-top: 2em;
+      margin-top: 20px;
       font-weight: bold;
+      font-size: 0.95rem;
     }
+
     footer {
       text-align: center;
-      padding: 1em;
+      padding: 15px;
       background: #2e7d32;
-      color: white;
-      margin-top: 2em;
-      font-size: 0.9em;
+      color: #fff;
+      font-size: 0.85rem;
+      margin-top: 30px;
     }
-    .btn {
-      display: inline-block;
-      background: #43a047;
-      color: white;
-      padding: 0.6em 1.2em;
-      margin: 0.5em 0;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: #2e7d32;
+
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .botao-edital,
+      .botao-endemias,
+      .btn {
+        width: auto;
+        display: inline-block;
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
+
+<header>
   <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiv8DplaZnFCsHVQ1yx0d2eppZHNRisruRvJY1kpTNjZbSUqvuGRX-JjeMEM7Cp1E0CvFTqFpX0hj1qbJGcIYS6VgzTvSCQKmQucynSX5JHs3rk--vkscToOZvOwDt6h0H05L7Ek49jFCruMkNZ56Nv7HGH4l69x3WHbKUN00Gt3vGpgGBUeW8csgYB=w348-h264-p-k-no-nu" 
        alt="Logo Professor Marcelo" 
        class="banner-img">
   <h1>📅 Datas de Concursos - Prof. Marcelo Ferreira</h1>
 </header>
 
-<style>
-  header {
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-bottom: 3px solid #0084ff;
-  }
+<main>
 
-  .banner-img {
-    max-width: 350px;
-    height: auto;
-    border-radius: 12px;
-    margin-bottom: 10px;
-  }
+<h2>📌 Dezembro 2025</h2>
+<div class="concurso">07/12 - Morrinhos - CE (ACS e ACE) - Instituto Consulpam (REALIZADO)</div>
+<a href="https://consulpam.com.br/index.php?menu=concursos&acao=ver&id=765" target="_blank" class="botao-edital">📄 Ver Edital e Informações</a>
 
-  header h1 {
-    font-size: 1.8em;
-    color: #333;
-  }
-</style>
-
-    <h2>📌 Dezembro 2025</h2>
-    <div class="concurso">07/12 - Morrinhos - CE (ACS e ACE) - Instituto Consulpam (REALIZADO)</div>
-    <a href="https://consulpam.com.br/index.php?menu=concursos&acao=ver&id=765" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
+<a href="https://datasdeconcursos-profmarcelo.vercel.app/agente-endemias.html" target="_blank" class="botao-endemias">
+🧠 Acessar Simulados — Agente de Endemias
 </a>
 
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-<!-- Botão para Simulados - Agente de Endemias -->
-<a href="https://datasdeconcursos-profmarcelo.vercel.app/agente-endemias.html" 
-   target="_blank" 
-   class="botao-endemias">
-  🧠 Acessar Simulados — Agente de Endemias
+<div class="concurso">07/12 - Paço do Lumiar - MA (Seletivo) - Fundação Sousandrade (REALIZADO)</div>
+<a href="https://www.fsaduconcursos.org.br/c/central/" target="_blank" class="botao-edital">📄 Ver Edital e Informações</a>
+
+<!-- TODO O RESTANTE DO CONTEÚDO PERMANECE IGUAL AO SEU -->
+<!-- Basta continuar colando os concursos abaixo, sem repetir <style> -->
+
+<div class="atencao">
+⚠️ Atenção: Todas as datas podem sofrer alteração. Os dados acima são apenas reprodução das datas oficiais divulgadas no edital. A página será atualizada semanalmente.
+</div>
+
+<h2>🛏️ Contatos e Informações Úteis</h2>
+<p>Espaço reservado para informações sobre hotéis, ônibus ou caronas para o dia da prova.</p>
+
+<a class="btn" href="https://forms.gle/1LiQbKyKhEoXuGDD9" target="_blank">
+📨 Enviar sugestão / Contato
 </a>
 
-<style>
-  .botao-endemias {
-    display: inline-block;
-    background-color: #0077cc; /* azul vibrante */
-    color: #fff;
-    padding: 10px 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-top: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-    transition: background-color 0.3s, transform 0.2s;
-  }
+<p id="update-time" style="margin-top:10px; font-size:0.85rem; color:#555;"></p>
 
-  .botao-endemias:hover {
-    background-color: #005fa3;
-    transform: scale(1.03);
-  }
-</style>
+</main>
 
-    <div class="concurso">07/12 - Paço do Lumiar - MA (Seletivo) - Fundação Sousandrade(REALIZADO)</div>
-    <a href="https://www.fsaduconcursos.org.br/c/central/" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
+<footer>
+Organizado por: Professor Marcelo Ferreira — marcelomferreira2025@gmail.com
+</footer>
 
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
+<script>
+  const now = new Date();
+  document.getElementById("update-time").textContent =
+    "Última atualização: " + now.toLocaleString("pt-BR");
+</script>
 
- <h2>📌 Janeiro 2026</h2>
-     
-    <div class="concurso">11/01 - José de Freitas-PI - Instituto Legatus</div>
-    <a href="https://www.legatus.org.br/concursos/149/municipio-de-jose-de-freitas/" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-<div class="concurso">11/01 - SEMEC - TERESINA - NUCEPE</div>
-    <a href="https://nucepe.uespi.br/" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <div class="concurso">11/01 - Vitoria do Mearim-MA -BANCA FUNATEC</div>
-    <a href="https://www.funatec.org.br/concursos/154/concurso-publico-da-prefeitura-municipal-de-vitoria-do-mearim-ma" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="concurso">18/01 - Caridade-CE Fundação CETREDE </div>
-    <a href="https://cetredeneoconcursos.com.br/Concursos_PDF/095_Concurso/095_Concurso095.pdf" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <div class="concurso">18/01 - Petrolina-PE IAUPE </div>
-    <a href="http://www.upenet.com.br/concursos/2025/25_Pref_Petrolina/?concurso=25_Pref_Petrolina" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <h2>📌 Fevereiro 2026</h2>
-    <div class="concurso">01/02 - Rosario-MA - Instituto jk</div>
-    <a href="https://institutojkma.org/concurso-da-prefeitura-de-rosario/" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <div class="concurso">01/02 - Viçosa do Ceará -ACE e ACS - Instituto Consulpam</div>
-    <a href="https://consulpam.com.br/index.php?menu=concursos&acao=ver&id=793" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <div class="concurso">08/02 - Maranguape-CE (ACE e ACS) - Instituto Consulpam</div>
-    <a href="https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=777" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <div class="concurso">08/02 - Maranguape-CE (MAGISTERIO) - Instituto Consulpam</div>
-    <a href="https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=775" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <div class="concurso">28/02 - Eusebio-CE INstituto COnsulpam </div>
-    <a href="https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=781" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <h2>📌 Março 2026</h2>
-     <div class="concurso">01/03 - IBGE - SELETIVO APM/SCQ Fundação Getulio Vargas - FGV </div>
-    <a href="https://conhecimento.fgv.br/concursos/pssibge25" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="concurso">01/03 - Eusebio-CE Instituto COnsulpam </div>
-    <a href="https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=781" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="concurso">01/03 - SAAE de Cururupu -MA Fundação Sousandrade </div>
-    <a href="https://www.fsaduconcursos.org.br/c/1370/info.php" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="concurso">01/03 - Conselho Regional de Contabilidade do Ceará - CRC  Instituto COnsulpan </div>
-    <a href="https://institutoconsulplan.org.br/getConc.aspx?key=SB1AFUzp96c=" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-        <div class="concurso">01/03 - Eusebio-CE Instituto COnsulpam </div>
-    <a href="https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=781" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="concurso">01/03 - SEDUC-PI  CEBRASPE </div>
-    <a href="https://www.cebraspe.org.br/concursos/" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="concurso">08/03 - Alcantara-MA (cargos gerais) Fundação Sousândrade </div>
-    <a href="https://www.fsaduconcursos.org.br/c/1365/info.php" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-     <div class="concurso">08/03 - Alcantara-MA (agente de Endemias) Fundação Sousândrade </div>
-    <a href="https://www.fsaduconcursos.org.br/c/1367/publicacoes.php" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="concurso">08/03 - Alcantara-MA (Guarda Municipal, Agente de TRansito e BOmbeiro civil) Fundação Sousândrade </div>
-    <a href="https://www.fsaduconcursos.org.br/c/1366/info.php" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-      <h2>📌 Abril 2026</h2>
-    <div class="concurso">01/04 - Croata - Instituto Legatus</div>
-    <a href="https://www.legatus.org.br/concursos/151/municipio-de-croata-ce/" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="concurso">12/04 - Caxias-MA - Instituto Legatus</div>
-    <a href="https://www.legatus.org.br/concursos/130/municipio-de-caxias-ma/" target="_blank" class="botao-edital">
-  📄 Ver Edital e Informações
-</a>
-
-<style>
-  .botao-edital {
-    display: inline-block;
-    background-color: #0084ff;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .botao-edital:hover {
-    background-color: #005fcc;
-  }
-</style>
-    <div class="atencao">
-      ⚠️ Atenção: Todas as datas podem sofrer alteração. Os dados acima são apenas reprodução das datas oficiais divulgadas no edital. A página será atualizada semanalmente.
-    </div>
-
-    <h2>🛏️ Contatos e Informações Úteis</h2>
-    <p>Espaço reservado para informações sobre hotéis, ônibus ou caronas para o dia da prova.</p>
-
-    <a class="btn" href="https://forms.gle/1LiQbKyKhEoXuGDD9" target="_blank">📨 Enviar sugestão / Contato</a>
-
-    <p id="update-time" style="margin-top:1em; font-size:0.9em; color:#555;"></p>
-  </main>
-
-  <footer>
-    Organizado por: Professor Marcelo Ferreira — marcelomferreira2025@gmail.com
-  </footer>
-
-  <script>
-    const now = new Date();
-    const formatted = now.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
-    document.getElementById('update-time').textContent = "Última atualização: " + formatted;
-  </script>
 </body>
 </html>

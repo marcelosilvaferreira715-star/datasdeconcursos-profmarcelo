@@ -160,6 +160,80 @@ footer {
   </select>
 </div>
 
+  <h2>🏆 Ranking de Interesse (Prévia)</h2>
+<p style="font-size:0.9em;color:#555">
+Baseado nos cliques em <strong>“Vou fazer”</strong>. Ranking atualizado automaticamente.
+</p>
+
+<div id="ranking-geral"
+     style="background:#f1f8f4;padding:12px;border-radius:10px;margin-bottom:25px">
+</div>
+<script>
+function marcar(id){
+  let n = localStorage.getItem(id) || 0;
+  n++;
+  localStorage.setItem(id,n);
+  atualizar();
+  gerarRanking();
+}
+
+function atualizar(){
+  document.querySelectorAll('.concurso').forEach(c=>{
+    let id=c.id;
+    let n=localStorage.getItem(id)||0;
+    let r=document.getElementById('r_'+id);
+    if(r) r.innerText=`👥 Interessados: ${n}`;
+  });
+}
+
+function filtrar(){
+  let cargo=fCargo.value, estado=fEstado.value, cidade=fCidade.value;
+  document.querySelectorAll('.concurso').forEach(c=>{
+    let ok=true;
+    if(cargo && c.dataset.cargo!==cargo) ok=false;
+    if(estado && c.dataset.estado!==estado) ok=false;
+    if(cidade && c.dataset.cidade!==cidade) ok=false;
+    c.style.display=ok?'block':'none';
+  });
+}
+
+function gerarRanking(){
+  let dados = [];
+
+  document.querySelectorAll('.concurso').forEach(c=>{
+    let id = c.id;
+    let interessados = Number(localStorage.getItem(id) || 0);
+    let titulo = c.innerText.split('\n')[0];
+
+    if(interessados > 0){
+      dados.push({
+        titulo: titulo,
+        interessados: interessados
+      });
+    }
+  });
+
+  dados.sort((a,b)=>b.interessados - a.interessados);
+
+  let div = document.getElementById('ranking-geral');
+  if(dados.length === 0){
+    div.innerHTML = "Ainda não há registros de interesse.";
+    return;
+  }
+
+  let html = "<ol>";
+  dados.forEach(d=>{
+    html += `<li><strong>${d.titulo}</strong> — 👥 ${d.interessados}</li>`;
+  });
+  html += "</ol>";
+
+  div.innerHTML = html;
+}
+
+atualizar();
+gerarRanking();
+</script>
+
 <h2>📌 Janeiro 2026</h2>
 
   <div class="concurso" data-cargo="Geral" data-estado="PI" data-cidade="Porto Alegre do Piauí" id="pap">

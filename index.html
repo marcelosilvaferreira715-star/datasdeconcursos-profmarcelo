@@ -2,83 +2,106 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Concursos 2026 — Calendário e Filtros</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datas de Concursos 2026 - Prof. Marcelo Ferreira</title>
 
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  background: #f4fdf4;
   margin: 0;
-  padding: 0;
 }
 
 header {
-  background: #1e88e5;
-  color: white;
-  padding: 15px;
   text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg,#2e7d32,#66bb6a);
+  color: #fff;
+}
+
+header img {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 12px;
 }
 
 main {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
-  padding: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+h2 {
+  color: #2e7d32;
+  border-bottom: 2px solid #66bb6a;
 }
 
 .filtros {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.filtros select,
-.filtros input {
-  padding: 8px;
-  font-size: 14px;
-}
-
-.concurso-box {
-  background: white;
-  padding: 15px;
+select {
+  padding: 10px;
   border-radius: 6px;
-  margin-bottom: 15px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
 }
 
 .concurso {
-  font-weight: bold;
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .botoes {
-  margin-top: 10px;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .botao {
-  display: inline-block;
   padding: 8px 12px;
-  margin-right: 5px;
-  margin-top: 5px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: 6px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border: none;
+}
+
+.edital {
+  background: #0084ff;
+  color: #fff;
 }
 
 .vou-fazer {
   background: #43a047;
-  color: white;
+  color: #fff;
 }
 
-.edital {
-  background: #1e88e5;
-  color: white;
+.ranking {
+  font-size: 0.85em;
+  margin-top: 6px;
+  color: #333;
 }
 
-.marcado {
-  background: #c8e6c9;
+footer {
+  background: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+@media (min-width: 700px) {
+  .filtros {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>
 </head>
@@ -86,126 +109,126 @@ main {
 <body>
 
 <header>
-  <h1>📅 Concursos 2026</h1>
-  <p>Filtre por cargo, cidade ou estado e organize seus estudos</p>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiv8DplaZnFCsHVQ1yx0d2eppZHNRisruRvJY1kpTNjZbSUqvuGRX-JjeMEM7Cp1E0CvFTqFpX0hj1qbJGcIYS6VgzTvSCQKmQucynSX5JHs3rk--vkscToOZvOwDt6h0H05L7Ek49jFCruMkNZ56Nv7HGH4l69x3WHbKUN00Gt3vGpgGBUeW8csgYB=w348-h264-p-k-no-nu">
+  <h1>📅 Datas de Concursos 2026</h1>
 </header>
 
 <main>
 
-<!-- FILTROS -->
+<h2>🔎 Filtros</h2>
 <div class="filtros">
-  <select id="filtroCargo">
-    <option value="">Todos os cargos</option>
-    <option value="ACS">ACS</option>
-    <option value="ACE">ACE</option>
-    <option value="Magisterio">Magistério</option>
-    <option value="Administrativo">Administrativo</option>
+  <select id="fCargo" onchange="filtrar()">
+    <option value="">Cargo</option>
+    <option>ACS</option>
+    <option>ACE</option>
+    <option>Magistério</option>
+    <option>Administrativo</option>
   </select>
 
-  <select id="filtroEstado">
-    <option value="">Todos os estados</option>
-    <option value="PI">PI</option>
-    <option value="CE">CE</option>
-    <option value="MA">MA</option>
+  <select id="fEstado" onchange="filtrar()">
+    <option value="">Estado</option>
+    <option>CE</option>
+    <option>MA</option>
+    <option>PI</option>
+    <option>PE</option>
   </select>
 
-  <input type="text" id="filtroCidade" placeholder="Digite a cidade">
+  <select id="fCidade" onchange="filtrar()">
+    <option value="">Cidade</option>
+    <option>José de Freitas</option>
+    <option>Maranguape</option>
+    <option>Alcântara</option>
+    <option>Caxias</option>
+  </select>
 </div>
 
-<!-- CONCURSOS -->
+<h2>📌 Janeiro 2026</h2>
 
-<div class="concurso-box concurso"
-     data-cargo="ACS"
-     data-estado="CE"
-     data-cidade="Maranguape"
-     id="maranguape_acs">
-  📌 08/02/2026 — Maranguape/CE  
-  <br>👤 Cargo: ACS e ACE  
-  <br>🏛️ Banca: Consulpam
-
-  <div class="botoes">
-    <button class="botao vou-fazer" onclick="marcar('maranguape_acs')">✅ Vou fazer</button>
-    <a class="botao edital" href="https://www.consulpam.com.br" target="_blank">📄 Edital</a>
-  </div>
+<div class="concurso" data-cargo="Administrativo" data-estado="PI" data-cidade="José de Freitas" id="jf">
+11/01 – José de Freitas/PI – Instituto Legatus
+<div class="botoes">
+<a class="botao edital" href="https://www.legatus.org.br/concursos/149/municipio-de-jose-de-freitas/" target="_blank">📄 Edital</a>
+<button class="botao vou-fazer" onclick="marcar('jf')">✅ Vou fazer</button>
+</div>
+<div class="ranking" id="r_jf"></div>
 </div>
 
-<div class="concurso-box concurso"
-     data-cargo="Magisterio"
-     data-estado="PI"
-     data-cidade="Altos"
-     id="altos_magisterio">
-  📌 15/03/2026 — Altos/PI  
-  <br>👤 Cargo: Magistério  
-  <br>🏛️ Banca: A definir
+<h2>📌 Fevereiro 2026</h2>
 
-  <div class="botoes">
-    <button class="botao vou-fazer" onclick="marcar('altos_magisterio')">✅ Vou fazer</button>
-    <a class="botao edital" href="#" target="_blank">📄 Edital</a>
-  </div>
+<div class="concurso" data-cargo="ACS" data-estado="CE" data-cidade="Maranguape" id="mar_acs">
+08/02 – Maranguape/CE – ACS e ACE – Consulpam
+<div class="botoes">
+<a class="botao edital" href="https://www.consulpam.com.br/index.php?menu=concursos&acao=ver&id=777" target="_blank">📄 Edital</a>
+<button class="botao vou-fazer" onclick="marcar('mar_acs')">✅ Vou fazer</button>
+</div>
+<div class="ranking" id="r_mar_acs"></div>
 </div>
 
-<div class="concurso-box concurso"
-     data-cargo="Administrativo"
-     data-estado="MA"
-     data-cidade="Tuntum"
-     id="tuntum_adm">
-  📌 20/04/2026 — Tuntum/MA  
-  <br>👤 Cargo: Agente Administrativo  
-  <br>🏛️ Banca: A definir
+<h2>📌 Março 2026</h2>
 
-  <div class="botoes">
-    <button class="botao vou-fazer" onclick="marcar('tuntum_adm')">✅ Vou fazer</button>
-    <a class="botao edital" href="#" target="_blank">📄 Edital</a>
-  </div>
+<div class="concurso" data-cargo="ACE" data-estado="MA" data-cidade="Alcântara" id="alc_ace">
+08/03 – Alcântara/MA – Agente de Endemias
+<div class="botoes">
+<a class="botao edital" href="https://www.fsaduconcursos.org.br/c/1367/publicacoes.php" target="_blank">📄 Edital</a>
+<button class="botao vou-fazer" onclick="marcar('alc_ace')">✅ Vou fazer</button>
 </div>
+<div class="ranking" id="r_alc_ace"></div>
+</div>
+
+<h2>📌 Abril 2026</h2>
+
+<div class="concurso" data-cargo="Administrativo" data-estado="MA" data-cidade="Caxias" id="caxias">
+12/04 – Caxias/MA – Instituto Legatus
+<div class="botoes">
+<a class="botao edital" href="https://www.legatus.org.br/concursos/130/municipio-de-caxias-ma/" target="_blank">📄 Edital</a>
+<button class="botao vou-fazer" onclick="marcar('caxias')">✅ Vou fazer</button>
+</div>
+<div class="ranking" id="r_caxias"></div>
+</div>
+
+<a class="botao edital" href="https://datasdeconcursos-profmarcelo.vercel.app/agente-endemias.html" target="_blank">
+🧠 Simulados – Agente de Endemias
+</a>
 
 </main>
 
+<footer>
+Organizado por Prof. Marcelo Ferreira — marcelomferreira2025@gmail.com
+</footer>
+
 <script>
-const filtroCargo = document.getElementById("filtroCargo");
-const filtroEstado = document.getElementById("filtroEstado");
-const filtroCidade = document.getElementById("filtroCidade");
-const concursos = document.querySelectorAll(".concurso-box");
+function marcar(id){
+  let n = localStorage.getItem(id) || 0;
+  n++;
+  localStorage.setItem(id,n);
+  atualizar();
+}
 
-function filtrar() {
-  const cargo = filtroCargo.value.toLowerCase();
-  const estado = filtroEstado.value.toLowerCase();
-  const cidade = filtroCidade.value.toLowerCase();
-
-  concursos.forEach(concurso => {
-    const cCargo = concurso.dataset.cargo.toLowerCase();
-    const cEstado = concurso.dataset.estado.toLowerCase();
-    const cCidade = concurso.dataset.cidade.toLowerCase();
-
-    const exibir =
-      (!cargo || cCargo.includes(cargo)) &&
-      (!estado || cEstado.includes(estado)) &&
-      (!cidade || cCidade.includes(cidade));
-
-    concurso.style.display = exibir ? "block" : "none";
+function atualizar(){
+  document.querySelectorAll('.concurso').forEach(c=>{
+    let id=c.id;
+    let n=localStorage.getItem(id)||0;
+    let r=document.getElementById('r_'+id);
+    if(r) r.innerText=`👥 Interessados: ${n}`;
   });
 }
 
-filtroCargo.addEventListener("change", filtrar);
-filtroEstado.addEventListener("change", filtrar);
-filtroCidade.addEventListener("keyup", filtrar);
-
-function marcar(id) {
-  localStorage.setItem(id, "vou_fazer");
-  document.getElementById(id).classList.add("marcado");
-  alert("Concurso marcado como: VOU FAZER");
+function filtrar(){
+  let cargo=fCargo.value, estado=fEstado.value, cidade=fCidade.value;
+  document.querySelectorAll('.concurso').forEach(c=>{
+    let ok=true;
+    if(cargo && c.dataset.cargo!==cargo) ok=false;
+    if(estado && c.dataset.estado!==estado) ok=false;
+    if(cidade && c.dataset.cidade!==cidade) ok=false;
+    c.style.display=ok?'block':'none';
+  });
 }
 
-window.onload = () => {
-  concursos.forEach(concurso => {
-    if (localStorage.getItem(concurso.id) === "vou_fazer") {
-      concurso.classList.add("marcado");
-    }
-  });
-};
+atualizar();
 </script>
 
 </body>
 </html>
+
 
 

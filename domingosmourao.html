@@ -1,8 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<header class="hero">
-  <div class="hero-overlay"></div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Apostila de Conhecimentos Locais – Domingos Mourão (PI)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-image:
+        url("eu-amo-dm.jpg"),
+        url("praca-domingos-mourao.jpg");
+
+      background-size: 50% 100%, 50% 100%;
+      background-position: left center, right center;
+      background-repeat: no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #203a43;
+    }
+
+    /* QUESTIONS */
+    .questions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .question-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .question-box h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      color: #0f2027;
+    }
+
+    /* BENEFITS */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit {
+      background: #eaf2f5;
+      padding: 20px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 50px 30px;
+      text-align: center;
+      border-radius: 16px;
+    }
+
+    .cta h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    .cta a:hover {
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f2027;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .hero {
+        background-size: cover;
+        background-position: center;
+        height: 360px;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="hero">
   <div class="hero-content">
     <h1>Apostila de Conhecimentos Locais</h1>
     <p>
@@ -11,17 +188,6 @@
       Conteúdo direto ao ponto, focado no que realmente cai na prova.
     </p>
   </div>
-</header>
-
-<body>
-
-<header>
-  <h1>Apostila de Conhecimentos Locais</h1>
-  <p>
-    Preparação estratégica para o concurso da Prefeitura de 
-    <strong>Domingos Mourão – Piauí</strong>.  
-    Conteúdo direto ao ponto, focado no que realmente cai na prova.
-  </p>
 </header>
 
 <div class="container">
@@ -56,36 +222,21 @@
     <h2>Por que escolher esta apostila?</h2>
 
     <div class="benefits">
-      <div class="benefit">
-        ✔ Conteúdo 100% focado no edital  
-      </div>
-
-      <div class="benefit">
-        ✔ Linguagem clara, objetiva e atualizada  
-      </div>
-
-      <div class="benefit">
-        ✔ Ideal para quem quer ganhar tempo e estudar com eficiência  
-      </div>
-
-      <div class="benefit">
-        ✔ Material organizado por quem entende de concursos públicos  
-      </div>
-
-      <div class="benefit">
-        ✔ Evite surpresas na prova de conhecimentos locais  
-      </div>
+      <div class="benefit">✔ Conteúdo 100% focado no edital</div>
+      <div class="benefit">✔ Linguagem clara, objetiva e atualizada</div>
+      <div class="benefit">✔ Ideal para quem quer ganhar tempo</div>
+      <div class="benefit">✔ Material organizado por concurseiro</div>
+      <div class="benefit">✔ Evite surpresas na prova</div>
     </div>
   </section>
 
   <section class="cta">
     <h2>Garanta sua vantagem na prova</h2>
     <p>
-      Não deixe os conhecimentos locais serem um obstáculo.  
+      Não deixe os conhecimentos locais serem um obstáculo.
       Estude com um material direcionado e aumente suas chances de aprovação.
     </p>
 
-    <!-- TROQUE O LINK PELO SEU WHATSAPP OU PLATAFORMA DE VENDA -->
     <a href="https://wa.link/zyrwtk" target="_blank">
       Quero comprar a apostila
     </a>
@@ -94,10 +245,13 @@
 </div>
 
 <footer>
-  © 2026 – Apostila de Conhecimentos Locais | Domingos Mourão – PI  
-  <br />
+  © 2026 – Apostila de Conhecimentos Locais | Domingos Mourão – PI<br>
   Todos os direitos reservados.
 </footer>
+
+</body>
+</html>
+
 
 </body>
 </html>
